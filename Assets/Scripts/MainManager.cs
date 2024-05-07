@@ -6,7 +6,11 @@ using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
-    public Brick BrickPrefab;
+	public static MainManager Instance;
+
+
+
+	public Brick BrickPrefab;
     public int LineCount = 6;
     public Rigidbody Ball;
 
@@ -38,7 +42,22 @@ public class MainManager : MonoBehaviour
         }
     }
 
-    private void Update()
+	private void Awake()
+	{
+		if (Instance != null)
+		{
+			Destroy(gameObject);
+			return;
+		}
+
+
+		Instance = this;
+		DontDestroyOnLoad(gameObject);
+
+		
+	}
+
+	private void Update()
     {
         if (!m_Started)
         {
