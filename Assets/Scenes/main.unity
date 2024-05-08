@@ -346,6 +346,7 @@ MonoBehaviour:
   LineCount: 6
   Ball: {fileID: 177912862}
   ScoreText: {fileID: 188020406}
+  BestScoreText: {fileID: 2078529056}
   GameOverText: {fileID: 474497238}
 --- !u!1 &455529321
 GameObject:
@@ -1153,6 +1154,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1438794951142458561, guid: e298a352b080b8949b4bbc2ca619fad7, type: 3}
   m_PrefabInstance: {fileID: 8969273174940071336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078529056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1463094754275910761, guid: e298a352b080b8949b4bbc2ca619fad7, type: 3}
+  m_PrefabInstance: {fileID: 8969273174940071336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2137539494
 GameObject:
   m_ObjectHideFlags: 0
