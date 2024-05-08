@@ -3,24 +3,39 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+
 
 public class MenuUiHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public InputField nameInputField;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
+
 
 	public void StartNew()
 	{
+
+		// Get the player's name from the input field
+		string playerName = nameInputField.text;
+
+		// Store the player's name in PlayerPrefs to pass it to the MainManager
+		PlayerPrefs.SetString("PlayerName", playerName);
+
+		// Get the current best score from PlayerPrefs
+		int bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+		// Update the best score text in PlayerPrefs with the new input score
+		PlayerPrefs.SetInt("BestScore", bestScore);
+
 		SceneManager.LoadScene(1);
+		
+		
+
 	}
 
 	public void ExitButtonClicked()
@@ -36,4 +51,7 @@ public class MenuUiHandler : MonoBehaviour
 
 
 	}
+
+	
+	
 }
